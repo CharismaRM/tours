@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220219212449">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220220104135">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +57,7 @@
 							<div class="_icon-arrow-down"></div>
 
 						</div>
-						<div class="header__user _icon-user">
+						<div data-popup="#login" class="header__user _icon-user">
 							<p class="header__user_text">Вход</p>
 						</div>
 					</div>
@@ -796,19 +796,35 @@
 			</div>
 		</footer>
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+	<div id="login" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">Закрыть</button>
+				<div class="login">
+					<div class="login__body">
+						<div class="login__title title">
+							Регистрация
+						</div>
+						<form class="form login__form" action="#">
+							<div class="form__line login__form-line">
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Имя" class="input login__input">
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Фамилия" class="input login__input">
+								<input autocomplete="off" type="text" name="form[]" data-required="email" data-error="Введен не верный E-mail" placeholder="Email" class="input login__input">
+
+
+								<input autocomplete="off" type="password" name="form[]" value="123456" placeholder="Пароль" class="input login__input ">
+								<input autocomplete="off" type="password" name="form[]" value="123456" placeholder="Подтверждение пароля" class="input login__input">
+
+
+							</div>
+							<button type="submit" class="button login__button">Отправить</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
- -->
-
-	<script src="js/app.min.js?_v=20220219212449"></script>
+	<script src="js/app.min.js?_v=20220220104135"></script>
 </body>
 
 </html>
